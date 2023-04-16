@@ -1,7 +1,7 @@
-
+// Exercise 2.2.5
 import javax.swing.JOptionPane;
 
-public class doublenumbers {
+public class Doublenumbers {
     public static void main (String[] args) {
         String strn1, strn2;
         
@@ -12,23 +12,21 @@ public class doublenumbers {
         strn2 = JOptionPane.showInputDialog(null,
                 "Please input the second number: ","Input the second number", JOptionPane.INFORMATION_MESSAGE);
         double n2 = Double.parseDouble(strn2);
-        System.out.println(" the first number: "+ n1 + 
-        "\n the second number: " +n2);
-
+        System.out.printf(" The first number: %.2f\n The second number: %.2f\n",n1,n2);
         double sum = n1 + n2;
-        System.out.println(" the sum: " + sum);
+        System.out.printf(" The sum: %.2f\n",sum);
 
         double dif = n1 - n2;
-        System.out.println(" the difference: " + dif);
+        System.out.printf(" The difference: %.2f\n",dif);
         double pro = n1*n2;
-        System.out.println(" the product: " + pro);
+        System.out.printf(" The product: %.2f\n",pro);
         if (n2 == 0)
         {
-            System.out.println(" the divisor equal 0\n");
+            System.out.println(" The divisor equal 0. please check again\n");
         }else 
         {
             double quo = n1/n2;
-            System.out.println(" the quotient: " + quo);
+            System.out.printf(" The quotient: %.2f\n",quo);
         }
     System.exit(0);
     }
