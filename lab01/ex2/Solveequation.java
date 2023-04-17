@@ -29,7 +29,7 @@ public class Solveequation{
                 double b = Double.parseDouble(n2); // input b
 
                 JOptionPane.showMessageDialog(null,"x = " + -b/a, // solution
-                "The solution:", JOptionPane.INFORMATION_MESSAGE);
+                "First degree equation:", JOptionPane.INFORMATION_MESSAGE);
 
             }else if (i == 2){
                 String[] C = {"a11","a12","b1","a21","a22","b2"};
@@ -98,15 +98,15 @@ public class Solveequation{
                     double x2 = (-b - Math.sqrt(delta))/(2*a);
 
                     JOptionPane.showMessageDialog(null, "The equation has two solutions:\nx1 = " + x1 +
-                    "\nx2 = " + x2,"The solution",JOptionPane.INFORMATION_MESSAGE);
+                    "\nx2 = " + x2,"The second degree equation:",JOptionPane.INFORMATION_MESSAGE);
 
                 }else if (delta == 0)
                 {   
                     JOptionPane.showMessageDialog(null, "The equation has one solutions:\nx = " + -b/(2*a)
-                    ,"The solution",JOptionPane.INFORMATION_MESSAGE);
+                    ,"The second degree equation:",JOptionPane.INFORMATION_MESSAGE);
                 }else{
                     JOptionPane.showMessageDialog(null, "The equation has no solutions\n" 
-                    ,"The solution",JOptionPane.INFORMATION_MESSAGE);
+                    ,"The second degree equation:",JOptionPane.INFORMATION_MESSAGE);
                 }
             }else if (i == 4){
                 break;
