@@ -1,0 +1,4 @@
+2023-05-12 10:19:19,318 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-05-12 10:19:44,081 [Worker-14: Auto share git projects] WARN  org.eclipse.jgit.util.FS - Cannot run program "\usr\bin\git" (in directory "\usr\bin"): CreateProcess error=2, The system cannot find the file specified
+2023-05-12 11:09:35,861 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-05-12 11:09:40,473 [Worker-2: Refreshing workspace] WARN  org.eclipse.jgit.util.FS - Cannot run program "\usr\bin\git" (in directory "\usr\bin"): CreateProcess error=2, The system cannot find the file specified
