@@ -7,7 +7,7 @@ public class Cart {
 	
 	private DigitalVideoDisc itemsOrdered[] = 
 			new DigitalVideoDisc[MAX_NUMBERS_ORDERED];
-	
+	// Add methods
 	public void addDigitalVideoDisc(DigitalVideoDisc disc){
 		if (qtyOrdered == 20) {
 	
@@ -19,6 +19,44 @@ public class Cart {
 			System.out.println("The number of DVD in Cart: "+ qtyOrdered);
 		}
 	}
+	
+	public void addDigitalVideoDisc (DigitalVideoDisc [] dvdList) {
+		int n = dvdList.length;
+		if ((qtyOrdered + n)> 20) {
+			System.out.println("The cart is almost full");
+			System.out.println("The number of items in current cart: " + qtyOrdered);
+		}else{
+			
+			for(int j  = 0; j< n; j++) {
+				itemsOrdered[qtyOrdered] = dvdList[j];
+				System.out.println("The disc " + itemsOrdered[qtyOrdered].getTitle() +" has been added");
+				qtyOrdered++;
+			}
+			System.out.println("The number of DVD in Cart: "+ qtyOrdered);
+		}
+	
+	}
+	
+	public void addDigitalVideoDisc (DigitalVideoDisc dvd1, DigitalVideoDisc dvd2) {
+		if ((qtyOrdered + 2) > 20) {
+			System.out.println("The cart is almost full");
+		}else {
+			itemsOrdered[qtyOrdered] = dvd1;
+			System.out.println("The disc " + itemsOrdered[qtyOrdered].getTitle() +" has been added");
+			qtyOrdered++;
+			itemsOrdered[qtyOrdered] = dvd2;
+			System.out.println("The disc " + itemsOrdered[qtyOrdered].getTitle() +" has been added");
+			qtyOrdered++;
+			System.out.println("The number of DVD in Cart: "+ qtyOrdered);
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
 	// Check the total cost in cart
 	public double totalCost() {
 		double sum = 0;
