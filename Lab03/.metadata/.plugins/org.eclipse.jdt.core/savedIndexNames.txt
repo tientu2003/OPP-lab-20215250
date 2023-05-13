@@ -1,2 +1,0 @@
-INDEX VERSION 1.132+D:\1. Tai lieu\2022-2\3. Object-oriented Programming\lab\OPP-lab-20215250\Lab03\.metadata\.plugins\org.eclipse.jdt.core
-1865797976.index
