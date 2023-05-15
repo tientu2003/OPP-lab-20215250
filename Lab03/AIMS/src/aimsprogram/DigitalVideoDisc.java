@@ -76,4 +76,10 @@ public class DigitalVideoDisc {
 		this.id = nbDigitalVideoDiscs;
 	}
 	
+	//Lab 03 Part 6
+	public String toString() {
+		return id + ". DVD - " + title +" - " + category + " - " 
+				+ director + " - " +length + ": " + cost +"$";
+	}
+	
 }

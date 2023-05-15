@@ -13,15 +13,15 @@ public class Aims {
 		DigitalVideoDisc jungleDVD = new DigitalVideoDisc("Jungle");
 		
 		
-//		// Part 2 Method overloading
-//		DigitalVideoDisc dvdList[] = {dvd1,dvd2,dvd3};
-//		// Add the list of DVDs
-//		aCart.addDigitalVideoDisc(dvdList);
-//		// Add two List of DVDs
-//		aCart.addDigitalVideoDisc(dvd2,dvd3);
-//		
-//		//print total cost of items in the cart
-//		System.out.printf("Total cost is: %.2f\n",aCart.totalCost());
+		// Part 2 Method overloading
+		DigitalVideoDisc dvdList[] = {dvd1,dvd2,dvd3};
+		// Add the list of DVDs
+		aCart.addDigitalVideoDisc(dvdList);
+		// Add two List of DVDs
+		aCart.addDigitalVideoDisc(dvd2,dvd3);
+	
+		//print total cost of items in the cart
+		System.out.printf("Total cost is: %.2f\n",aCart.totalCost());
 		
 		
 		//Part 5 Class member

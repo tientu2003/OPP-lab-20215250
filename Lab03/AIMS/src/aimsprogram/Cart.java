@@ -19,7 +19,7 @@ public class Cart {
 			System.out.println("The number of DVD in Cart: "+ qtyOrdered);
 		}
 	}
-	
+	// Part 2 add the list of DVDs
 	public void addDigitalVideoDisc (DigitalVideoDisc [] dvdList) {
 		int n = dvdList.length;
 		if ((qtyOrdered + n)> 20) {
@@ -36,7 +36,7 @@ public class Cart {
 		}
 	
 	}
-	
+	// Part 2 add two dvds 
 	public void addDigitalVideoDisc (DigitalVideoDisc dvd1, DigitalVideoDisc dvd2) {
 		if ((qtyOrdered + 2) > 20) {
 			System.out.println("The cart is almost full");
@@ -50,12 +50,6 @@ public class Cart {
 			System.out.println("The number of DVD in Cart: "+ qtyOrdered);
 		}
 	}
-	
-	
-	
-	
-	
-	
 	
 	// Check the total cost in cart
 	public double totalCost() {
@@ -91,9 +85,6 @@ public class Cart {
 		System.out.println("The number of remaining DVD in Cart: "+ qtyOrdered);
 	}
 	
-	
-	
-	
 	// This method used to check the number of items in cart
 	public void checkquantity() {
 		System.out.println("The number of items in Cart: " + qtyOrdered);
@@ -101,4 +92,18 @@ public class Cart {
 			System.out.println( (i+1)+ " " + itemsOrdered[i].getTitle());
 		}
 	}
+	
+	// Print list of the Cart
+	
+	public void printCart() {
+		System.out.println("************************CART**************************");
+		System.out.println("Ordered Items:");
+		for (int i = 0; i< qtyOrdered; i++)
+			System.out.println(itemsOrdered[i]);
+		System.out.printf("Total cost: %.2f\n", totalCost());
+		System.out.println("******************************************************");
+		
+	}
+	
+	
 }
