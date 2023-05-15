@@ -81,5 +81,7 @@ public class DigitalVideoDisc {
 		return id + ". DVD - " + title +" - " + category + " - " 
 				+ director + " - " +length + ": " + cost +"$";
 	}
-	
+	public boolean isMatch(String find) {
+		return title.contains(find);
+	}
 }
