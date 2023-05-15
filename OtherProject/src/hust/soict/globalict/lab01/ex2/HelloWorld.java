@@ -1,3 +1,4 @@
+package hust.soict.globalict.lab01.ex2;
 //Example 1: HelloWorld.java
 //Text-printing program
 public class HelloWorld {

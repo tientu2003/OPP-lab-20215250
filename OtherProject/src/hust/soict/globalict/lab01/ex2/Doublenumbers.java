@@ -1,3 +1,4 @@
+package hust.soict.globalict.lab01.ex2;
 // Exercise 2.2.5
 import javax.swing.JOptionPane;
 

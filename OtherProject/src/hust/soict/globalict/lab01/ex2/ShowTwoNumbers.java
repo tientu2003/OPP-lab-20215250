@@ -1,3 +1,4 @@
+package hust.soict.globalict.lab01.ex2;
 // Example 5: ShowTwoNumbers.java
 import javax.swing.JOptionPane;
 
