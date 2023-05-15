@@ -105,31 +105,5 @@ public class Cart {
 		
 	}
 	
-	// Search methods
-	
-	// by ID
-	public void searchID(int id) {
-		int flag = 0;
-		for(int i = 0 ; i < qtyOrdered ; i++) {
-			if (itemsOrdered[i].getId() == id) {
-				System.out.println("The item found");
-				System.out.println(itemsOrdered[i]);
-				flag = 1;
-			}	
-		}
-		
-		if (flag == 0) System.out.println("Could not found the items having ID: " + id);
-	}
-	//by Title
-	public void searchTitle(String title) {
-		int flag = 0;
-		for (int i = 0; i < qtyOrdered; i++) {
-			if (itemsOrdered[i].isMatch(title) == true) {
-				System.out.println(itemsOrdered[i]);
-				flag = 1;
-			}
-		}
-		if (flag == 0) System.out.println("Could not found the items having title: " + title);
-	}
 	
 }
