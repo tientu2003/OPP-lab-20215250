@@ -40,6 +40,9 @@ public class DigitalVideoDisc {
 	public void setTitle(String title) {
 		this.title = title;
 	}
+	public void setId(int newid) {
+		this.id = newid;
+	}
 	
 	//Constructor 
 	public DigitalVideoDisc(String title) {
