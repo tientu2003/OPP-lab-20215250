@@ -1,9 +1,14 @@
 package hust.soict.globalict.aims.media;
 
-public class DigitalVideoDisc extends Disc {
+public class DigitalVideoDisc extends Disc implements IPlayable {
 	
 	// class member
 	private static int nbDigitalVideoDiscs = 0;
+	//
+	public void play() {
+		System.out.println("Playing DVD: " + this.getTitle());
+		System.out.println("DVD length: " + this.getLength());
+	}
 	
 	public static int getNbDigitalVideoDiscs() {
 		return nbDigitalVideoDiscs;

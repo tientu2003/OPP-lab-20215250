@@ -3,9 +3,18 @@ package hust.soict.globalict.aims.media;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CompactDisc extends Disc{
+public class CompactDisc extends Disc implements IPlayable{
 	private String artist;
 	private List<Track> tracks = new ArrayList<Track>();
+	
+	public void play() {
+		System.out.println("Playing: " + getTitle());
+		System.out.println("Artist: " + getArtist());
+		for(Track a: tracks) {
+			a.play();
+		}
+		
+	}
 	
 	public void addTrack(Track a){
 		if(tracks.contains(a))

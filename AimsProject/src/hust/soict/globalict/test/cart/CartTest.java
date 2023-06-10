@@ -16,10 +16,10 @@ public class CartTest {
 		DigitalVideoDisc dvd4 = new DigitalVideoDisc("The Lion King 2", "Animation", "Roger Allers", 87, 19.95f);
 
 		
-		cart.addDigitalVideoDisc(dvd1);
-		cart.addDigitalVideoDisc(dvd2);
-		cart.addDigitalVideoDisc(dvd3);
-		cart.addDigitalVideoDisc(dvd4);
+		cart.addMedia(dvd1);
+		cart.addMedia(dvd2);
+		cart.addMedia(dvd3);
+		cart.addMedia(dvd4);
 		
 		//Test the print method
 		cart.printCart();
