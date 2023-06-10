@@ -5,7 +5,7 @@ import hust.soict.globalict.aims.media.Media;
 
 public class Store {
 	
-	ArrayList<Media> itemsInStore = new ArrayList<Media>();
+	private ArrayList<Media> itemsInStore = new ArrayList<Media>();
 
 	public void addMedia(Media media) {
 		if(!(itemsInStore.contains(media))){

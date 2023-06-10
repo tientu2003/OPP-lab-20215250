@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import hust.soict.globalict.aims.media.Media;
 public class Cart {
 	
-	ArrayList<Media> itemsOrdered = new ArrayList<Media>();
+	private ArrayList<Media> itemsOrdered = new ArrayList<Media>();
 	public void addMedia(Media media) {
 		if(!(itemsOrdered.contains(media))){
 			this.itemsOrdered.add(media);
