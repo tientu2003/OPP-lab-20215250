@@ -7,6 +7,12 @@ public class CompactDisc extends Disc implements IPlayable{
 	private String artist;
 	private List<Track> tracks = new ArrayList<Track>();
 	
+	@Override
+	
+	public String toString() {
+		return "CD " + getTitle() +" - "+ artist + " - " + getCost() ;
+	}
+	
 	public void play() {
 		System.out.println("Playing: " + getTitle());
 		System.out.println("Artist: " + getArtist());

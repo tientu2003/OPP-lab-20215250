@@ -6,6 +6,11 @@ import java.util.List;
 public class Book extends Media {
 	private List<String> authors = new ArrayList<String>();
 	
+	@Override
+	public String toString() {
+		return "Book " + getTitle() +" - "+ getAuthor() + " - " + getCost() ;
+	}
+	
 	public Book() {
 		super();
 	}
