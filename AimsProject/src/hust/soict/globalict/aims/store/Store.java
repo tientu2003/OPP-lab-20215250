@@ -2,7 +2,7 @@ package hust.soict.globalict.aims.store;
 
 import java.util.Scanner;
 
-import hust.soict.globalict.aims.disc.DigitalVideoDisc;
+import hust.soict.globalict.aims.media.DigitalVideoDisc;
 
 public class Store {
 	
