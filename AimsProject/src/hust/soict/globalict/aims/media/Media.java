@@ -7,7 +7,16 @@ public abstract class Media {
 	private String category;
 	private float cost;
 	
+	@Override
+	public boolean equals(Object obj) {
+		if(!(obj instanceof Media)) {
+			return false;
+		}
+		Media o = (Media)obj;
+		return this.title.equals(o.getTitle());
 	
+	}
+
 	public Media() {
 		super();
 	}

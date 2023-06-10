@@ -5,12 +5,19 @@ public class Track implements IPlayable{
 	private String title;
 	private int length;
 	
+	@Override
+	public boolean equals(Object obj) {
+		if(!(obj instanceof Track)) {
+			return false;
+		}
+		Track o = (Track)obj;
+		return title.equals(o.getTitle()) && (length == o.getLength()); 
+	}
+	
 	public void play() {
 		System.out.println("Playing DVD: " + this.getTitle());
 		System.out.println("DVD length: " + this.getLength());
 	}
-	
-	
 	
 	public String getTitle() {
 		return title;
