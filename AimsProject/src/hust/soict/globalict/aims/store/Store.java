@@ -23,12 +23,22 @@ public class Store {
 			System.out.println("The cart hadn't contained " + media.getTitle());
 		}
 	}
+	
+	public Media findMedia(String media) {
+		for(Media m:itemsInStore) {
+			if (m.getTitle().equals(media)) {
+				return m;
+			}
+		}
+		System.out.println("Could not found the media: " + media);
+		return null;
+	}	
 	// Print method the list of DVDS in store
 	public void printStore() {
 		int i = 1;
 		System.out.println("Stored Items:");
 		for (Media a: itemsInStore) {
-			System.out.println(i + " " + a.getTitle());	
+			System.out.println(i + " || " + a.getTitle() + " || " + a.getCost());	
 			i++;
 		}
 	}

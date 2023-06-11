@@ -52,6 +52,10 @@ public class CompactDisc extends Disc implements IPlayable{
 		return artist;
 	}
 
+	public CompactDisc() {
+		super();
+	}
+	
 	public CompactDisc(String artist) {
 		super();
 		this.artist = artist;

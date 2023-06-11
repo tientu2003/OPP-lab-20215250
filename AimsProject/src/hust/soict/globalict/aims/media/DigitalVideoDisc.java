@@ -1,6 +1,22 @@
 package hust.soict.globalict.aims.media;
 
-public class DigitalVideoDisc extends Disc implements IPlayable {
+public class DigitalVideoDisc extends Disc implements IPlayable,Comparable<DigitalVideoDisc>{
+
+	@Override
+	public int compareTo(DigitalVideoDisc a) {
+		if (this.getTitle().compareTo(a.getTitle())!= 0)
+			return this.getTitle().compareTo(a.getTitle());
+		else if(this.getLength() - a.getLength() != 0)
+			return a.getLength() - this.getLength();
+		else{
+			if (this.getCost() > a.getCost())
+				return 1;
+			else if (this.getCost() < a.getCost())
+				return -1;
+			else 
+				return 0;
+		}
+	}
 	
 	// class member
 	private static int nbDigitalVideoDiscs = 0;

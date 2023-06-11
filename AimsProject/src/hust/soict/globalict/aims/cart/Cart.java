@@ -4,6 +4,11 @@ import hust.soict.globalict.aims.media.Media;
 public class Cart {
 	
 	private ArrayList<Media> itemsOrdered = new ArrayList<Media>();
+	
+	public ArrayList<Media> getItems(){
+		return itemsOrdered;
+	}
+	
 	public void addMedia(Media media) {
 		if(!(itemsOrdered.contains(media))){
 			this.itemsOrdered.add(media);
@@ -33,11 +38,6 @@ public class Cart {
 	// This method used to check the number of items in cart
 	public void checkquantity() {
 		System.out.println("The number of items in Cart: " + itemsOrdered.size());
-		int i = 1;
-		for (Media a: itemsOrdered) {
-			System.out.println( i + " " + a.getTitle());
-			i++;
-		}
 	}
 	
 	// Print list of the Cart
@@ -47,7 +47,7 @@ public class Cart {
 		System.out.println("Ordered Items:");
 		int i = 1;
 		for (Media a: itemsOrdered) {
-			System.out.println( i+ " " + a.getTitle());
+			System.out.println( i+ " ||| " + a.getTitle() + " ||| " + a.getCost());
 			i++;
 		}
 		System.out.printf("Total cost: %.2f\n", totalCost());
