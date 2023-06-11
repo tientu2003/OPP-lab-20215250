@@ -7,7 +7,7 @@ public class Doublenumbers {
         String strn1, strn2;
         
         strn1 = JOptionPane.showInputDialog(null, 
-                "Please input the first number: ","Input the first number", JOptionPane.INFORMATION_MESSAGE);
+                "Please input the cost ","Input", JOptionPane.INFORMATION_MESSAGE);
         double n1 = Double.parseDouble(strn1);
         
         strn2 = JOptionPane.showInputDialog(null,
