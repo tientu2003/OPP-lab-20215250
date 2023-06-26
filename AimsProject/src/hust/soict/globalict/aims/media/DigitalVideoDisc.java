@@ -1,6 +1,6 @@
 package hust.soict.globalict.aims.media;
 
-public class DigitalVideoDisc extends Disc implements IPlayable,Comparable<DigitalVideoDisc>{
+public class DigitalVideoDisc extends Disc implements Playable,Comparable<DigitalVideoDisc>{
 
 	@Override
 	public int compareTo(DigitalVideoDisc a) {

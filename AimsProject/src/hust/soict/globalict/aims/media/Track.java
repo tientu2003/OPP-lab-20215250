@@ -1,6 +1,6 @@
 package hust.soict.globalict.aims.media;
 
-public class Track implements IPlayable{
+public class Track implements Playable{
 	
 	private String title;
 	private int length;
