@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="384.0" prefWidth="512.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+	<top>
+      <VBox prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="Options">
+                  <items>
+                        <MenuItem fx:id="s" mnemonicParsing="false" onAction="#menuViewStorePressed" text="View Store" />
+                        
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <Label fx:id="lbAdd" text="Add" textFill="AQUA">
+               <font>
+                  <Font size="50.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+   </top>
+   <bottom>
+      <Button mnemonicParsing="false" onAction="#btnAddPressed" text="Add" BorderPane.alignment="BOTTOM_RIGHT">
+         <BorderPane.margin>
+            <Insets bottom="20.0" right="20.0" />
+         </BorderPane.margin>
+      </Button>
+   </bottom>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER_LEFT">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="Title">
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets right="46.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="tfTitle" alignment="TOP_LEFT">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <padding>
+                        <Insets right="60.0" />
+                     </padding>
+                  </TextField>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" spacing="20.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="Id">
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets right="39.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="tfId" alignment="TOP_LEFT">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <padding>
+                        <Insets right="60.0" />
+                     </padding>
+                  </TextField>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="28.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="Category">
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets right="1.5" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="tfCategory" alignment="TOP_LEFT">
+                     <HBox.margin>
+                        <Insets left="21.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets right="60.0" />
+                     </padding>
+                  </TextField>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="85.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="Cost">
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets right="26.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="tfCost" alignment="TOP_LEFT">
+                     <HBox.margin>
+                        <Insets left="21.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets right="60.0" />
+                     </padding>
+                  </TextField>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
