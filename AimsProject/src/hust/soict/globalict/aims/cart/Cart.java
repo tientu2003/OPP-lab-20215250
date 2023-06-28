@@ -1,20 +1,42 @@
 package hust.soict.globalict.aims.cart;
-import java.util.ArrayList;
+
+
+import javax.naming.LimitExceededException;
+
 import hust.soict.globalict.aims.media.Media;
+import javafx.collections.*;
+
 public class Cart {
+	private boolean filter = false;
+	private ObservableList<Media> itemsOrdered = FXCollections.observableArrayList();
+	private ObservableList<Media> displayedItems = FXCollections.observableArrayList();
 	
-	private ArrayList<Media> itemsOrdered = new ArrayList<Media>();
+	final static int MAX_NUMBERS_ORDERD = 20;
 	
-	public ArrayList<Media> getItems(){
-		return itemsOrdered;
+	public ObservableList<Media> getItemsOrdered(){
+		if (!filter) {
+			return itemsOrdered;
+		}else {
+			return displayedItems;
+		}
 	}
 	
-	public void addMedia(Media media) {
-		if(!(itemsOrdered.contains(media))){
-			this.itemsOrdered.add(media);
+	public void resetFilter() {
+		filter = false;
+		displayedItems.clear();
+	}
+	
+	public void addMedia(Media media) throws LimitExceededException {
+		if(itemsOrdered.size() < MAX_NUMBERS_ORDERD) {
+			
+			if(!(itemsOrdered.contains(media))){
+				this.itemsOrdered.add(media);
+			}else {
+				System.out.println("The cart had contained " + media.getTitle());
+			}
 		}else {
-			System.out.println("The cart had contained " + media.getTitle());
-		}	
+			throw new LimitExceededException("ERROR: The number of media has reached its limit");
+		}
 	}	
 	
 	public void removeMedia(Media media) {
@@ -57,28 +79,34 @@ public class Cart {
 	// Search methods
 	
 		// by ID
-		public void searchID(int id) {
+		public int searchID(int id) {
+			filter = true;
 			int flag = 0;
 			for (Media a: itemsOrdered) {
 				if (a.getId() == id) {
 					System.out.println("The item found");
 					System.out.println(a);
+					displayedItems.add(a);
 					flag = 1;
 				}	
 			}
 			if (flag == 0) System.out.println("Could not found the items having ID: " + id);
+			return flag;
 		}
 		
 		//by Title
-		public void searchTitle(String title) {
+		public int searchTitle(String title) {
+			filter = true;
 			int flag = 0;
 			for (Media a: itemsOrdered) {
 				if (a.getTitle().equals(title)) {
 					System.out.println("The item found");
 					System.out.println(a);
+					displayedItems.add(a);
 					flag = 1;
 				}	
 			}
 			if (flag == 0) System.out.println("Could not found the items having title: " + title);
+			return flag;
 		}
 }

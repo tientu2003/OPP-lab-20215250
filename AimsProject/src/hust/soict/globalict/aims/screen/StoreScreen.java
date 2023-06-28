@@ -10,10 +10,15 @@ import java.util.ArrayList;
 
 import javax.swing.*;
 
+import hust.soict.globalict.aims.cart.Cart;
+
 import hust.soict.globalict.aims.media.Media;
 import hust.soict.globalict.aims.store.Store;
+
 public class StoreScreen extends JFrame{
 	private Store store;
+	private Cart cart;
+	
 	JPanel createNorth() {
 		JPanel north = new JPanel();
 		north.setLayout(new BoxLayout(north, BoxLayout.Y_AXIS));
@@ -62,29 +67,33 @@ public class StoreScreen extends JFrame{
 		
 	}
 	
-	JPanel createCenter() {
+	JPanel createCenter(){
 		JPanel center = new JPanel();
 		center.setLayout(new GridLayout(3,3,2,2));
 		
 		ArrayList<Media> mediaInStore = store.getItemsInStore();
 		for(int i = 0;i<mediaInStore.size(); i++) {
-			MediaStore cell = new MediaStore(mediaInStore.get(i));
+			MediaStore cell = new MediaStore(mediaInStore.get(i),cart);
 			center.add(cell);
 		}
 		return center; 
 	}
+
 	
-	
-	public StoreScreen(Store store) {
+	public StoreScreen(Store store, Cart cart) {
 		this.store = store;
+		this.cart = cart;
+	
 		Container cp = getContentPane();
 		cp.setLayout(new BorderLayout());
-		
-		cp.add(createNorth(),BorderLayout.NORTH);
-		cp.add(createCenter(),BorderLayout.CENTER);
-		
+		setDefaultCloseOperation(HIDE_ON_CLOSE);
 		setVisible(true);
 		setTitle("Store");
+		cp.add(createNorth(),BorderLayout.NORTH);
+		cp.add(createCenter(),BorderLayout.CENTER);
+	
+		
+		
 		setSize(1024,768);
 	}
 	

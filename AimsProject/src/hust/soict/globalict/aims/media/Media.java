@@ -14,12 +14,22 @@ public abstract class Media{
 	
 	@Override
 	public boolean equals(Object obj) {
-		if(!(obj instanceof Media)) {
+		try {
+			if(!(obj instanceof Media)) {
+				return false;
+			}
+			Media o = (Media)obj;
+			return this.title.equals(o.getTitle());
+		} catch (NullPointerException e) {
+			// TODO: handle exception
+			e.printStackTrace();
+			return false;
+		} catch (ClassCastException e) {
+			e.printStackTrace();
 			return false;
 		}
-		Media o = (Media)obj;
-		return this.title.equals(o.getTitle());
-	
+		
+		
 	}
 
 	public Media() {
